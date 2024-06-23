@@ -33,4 +33,5 @@ What follows is the Shelly 1 Mini Gen3 javascipt code that implement the water t
 
 ## System diagram:
 
-![](./Images/system_diagram.jpg = 250x250)
+<!-- ![](./Images/system_diagram.jpg) -->
+<p align="center"><img width="640" height="320" src="./Images/system_diagram.jpg"></p>
