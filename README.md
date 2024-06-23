@@ -24,3 +24,5 @@ Deciding on a solution:
 - A Shelly device is then used as a replacement for Home Assitant to read the ESPHome ESP32 sensor, control the inlet valve and send out notifications when the water level reaches some preset threshold.
 
 What follows is the Shelly Gen3 javascipt code that implement the water tank IoT controller.
+
+![image](https://github.com/KarlOttoFuchs/Shelly-Water-Level-Sensor-Integration/assets/86884634/35e2c3f9-734c-4d48-8463-a571233cf00b)
