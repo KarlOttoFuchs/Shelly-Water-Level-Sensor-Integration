@@ -33,4 +33,4 @@ What follows is the Shelly 1 Mini Gen3 javascipt code that implement the water t
 
 ## System diagram:
 
-![image](https://github.com/KarlOttoFuchs/Shelly-Water-Level-Sensor-Integration/assets/86884634/35e2c3f9-734c-4d48-8463-a571233cf00b)
+![image](images/system_diagram.jpg)
