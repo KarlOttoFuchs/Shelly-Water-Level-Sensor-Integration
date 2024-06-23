@@ -31,10 +31,14 @@ Deciding on a solution:
 
 What follows is the Shelly 1 Mini Gen3 javascipt code that implement the water tank IoT controller.
 
+---
+
 ## System diagram:
 
 <!-- ![](./Images/system_diagram.jpg) -->
 <p align="center"><img width="640" height="320" src="./Images/system_diagram.jpg"></p>
+
+---
 
 ## Pressure sensor and interface board
 
@@ -47,3 +51,10 @@ This industrial stainless steel submersible pressure level sensor adopts a high-
 <p align="center"><img width="640" height="320" src="./Images/pressure_sensor.jpg"></p>
 
 ### Interface board
+
+
+---
+
+## Shelly device
+
+
