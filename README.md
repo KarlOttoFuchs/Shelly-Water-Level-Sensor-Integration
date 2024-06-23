@@ -35,8 +35,12 @@ What follows is the Shelly 1 Mini Gen3 javascipt code that implement the water t
 
 ## System diagram:
 
+Water from the municipal connection fills the tank via a 24V DC electric normally closed inlet valve. A Shelly 1 Mini G3 provides 24V to the inlet valve in order to open the inlet and allow water to flow in to the tank. The shelly 1 Mini G3 also shuts off power to the inlet valve based on preset criteria.
+
 <!-- ![](./Images/system_diagram.jpg) -->
 <p align="center"><img width="640" height="320" src="./Images/system_diagram.jpg"></p>
+
+The water level in the tank is measured by a pressure sensor connected to an ESP32C3 interface board that is on the same wifi network as the Shelly device. The Shelly device polls the interface board for the water level as a % of the tank volume.
 
 ---
 
@@ -44,17 +48,12 @@ What follows is the Shelly 1 Mini Gen3 javascipt code that implement the water t
 
 ### Pressure sensor
 
-The water level in the tank is measured by a pressure sensor.
-
-This industrial stainless steel submersible pressure level sensor adopts a high-performance pressure sensing chip, with advanced circuit processing and temperature compensation technology. The submersible pressure level sensor receives different pressures at different depths of liquid, which can be converted into corresponding current signals and output through the sensor. In this way, the depth of liquid can be measured.
+The industrial stainless steel submersible pressure level sensor adopts a high-performance pressure sensing chip, with advanced circuit processing and temperature compensation technology. The submersible pressure level sensor receives different pressures at different depths of liquid, which can be converted into corresponding current signals and output through the sensor. In this way, the depth of liquid can be measured.
 
 <p align="center"><img width="640" height="320" src="./Images/pressure_sensor.jpg"></p>
 
 ### Interface board
 
-
 ---
 
 ## Shelly device
-
-
