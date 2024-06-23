@@ -23,6 +23,8 @@ Deciding on a solution:
 - I therefore proposed that I expose the web interface of the ESP32 water sensor and allow for the tank parameters to be added, and in so doing calculate the volume of water etc.  This was a very easy change as the device runs on ESPHome.
 - A Shelly device is then used as a replacement for Home Assitant to read the ESPHome ESP32 sensor, control the inlet valve and send out notifications when the water level reaches some preset threshold.
 
-What follows is the Shelly Gen3 javascipt code that implement the water tank IoT controller.
+What follows is the Shelly 1 Mini Gen3 javascipt code that implement the water tank IoT controller.
+
+## System components:
 
 ![image](https://github.com/KarlOttoFuchs/Shelly-Water-Level-Sensor-Integration/assets/86884634/35e2c3f9-734c-4d48-8463-a571233cf00b)
