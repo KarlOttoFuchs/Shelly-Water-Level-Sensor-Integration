@@ -35,3 +35,11 @@ What follows is the Shelly 1 Mini Gen3 javascipt code that implement the water t
 
 <!-- ![](./Images/system_diagram.jpg) -->
 <p align="center"><img width="640" height="320" src="./Images/system_diagram.jpg"></p>
+
+## Pressure sensor and interface board
+
+The water level in the tank is measured by a pressure sensor.
+
+This industrial stainless steel submersible pressure level sensor adopts high-performance pressure sensing chip, with advanced circuit processing and temperature compensation technology. The submersible pressure level sensor receives different pressures at different depths of liquid, which can be converted into corresponding current signals and output through the sensor. In this way, the depth of liquid can be measured.
+
+<p align="center"><img width="640" height="320" src="./Images/pressure_sensor.jpg"></p>
