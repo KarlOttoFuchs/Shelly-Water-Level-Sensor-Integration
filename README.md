@@ -17,8 +17,10 @@ Options explored:
 - Make use of my own solution that consists of stable and accurate ESP32 sensor module that connects to a 4-20mA pressure sensor.  This sensor connects to Home Assistant that send out the notifications and does the control
 - Add the 4-20mA pressure sensor to a Shelly device and write scipts to do the sensor interface and control.
 
-The solution:
+Deciding on a solution:
 - My friend loves what Home Assitant can do, but he does not want to invest in such an eco system, as it looks far too complicated to him.
 - Interfacing the 4-20mA sensor to the Shelly requires a current to voltage converter or sourcing a DC version of this sensor. The scripting also looked like it will be time consuming to write and debug. (something to be explored later)
 - I therefore proposed that I expose the web interface of the ESP32 water sensor and allow for the tank parameters to be added, and in so doing calculate the volume of water etc.  This was a very easy change as the device runs on ESPHome.
-- A Shelly device is then used as a replacement for Home Assitant to read the ESPHome ESP32 sensor, control the inlet valve and send out notifications when the water level reaches some preset threshold. 
+- A Shelly device is then used as a replacement for Home Assitant to read the ESPHome ESP32 sensor, control the inlet valve and send out notifications when the water level reaches some preset threshold.
+
+What follows is the Shelly Gen3 javascipt code that implement the water tank IoT controller.
