@@ -42,8 +42,6 @@ Water from the municipal connection fills the tank via a 24V DC electric normall
 
 The water level in the tank is measured by a pressure sensor connected to an ESP32C3 interface board that is on the same wifi network as the Shelly device. The Shelly device polls the interface board for the water level as a % of the tank volume.
 
-<p align="center"><img width="640" height="320" src="./Images/sensor_interface.jpg"></p>
-
 ---
 
 ## Pressure sensor and interface board
@@ -55,6 +53,8 @@ The industrial stainless steel submersible pressure level sensor adopts a high-p
 <p align="center"><img width="640" height="320" src="./Images/pressure_sensor.jpg"></p>
 
 ### Interface board
+
+<p align="center"><img width="640" height="320" src="./Images/sensor_interface.jpg"></p>
 
 ---
 
