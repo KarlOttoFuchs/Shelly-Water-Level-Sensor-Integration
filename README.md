@@ -54,7 +54,7 @@ The industrial stainless steel submersible pressure level sensor adopts a high-p
 
 ### Interface board
 
-<p align="center"><img width="640" height="640" src="./Images/sensor_interface.jpg"></p>
+<p align="center"><img width="640" height="400" src="./Images/sensor_interface.jpg"></p>
 
 ---
 
