@@ -35,12 +35,14 @@ What follows is the Shelly 1 Mini Gen3 javascipt code that implement the water t
 
 ## System diagram:
 
-Water from the municipal connection fills the tank via a 24V DC electric normally closed inlet valve. A Shelly 1 Mini G3 provides 24V to the inlet valve in order to open the inlet and allow water to flow in to the tank. The shelly 1 Mini G3 also shuts off power to the inlet valve based on preset criteria.
+Water from the municipal connection fills the tank via a 24V DC electric normally closed inlet valve. A Shelly 1 Mini G3 provides power to the inlet valve in order to open the inlet and allow water to flow in to the tank. The Shelly device also shuts off power to the inlet valve based on preset criteria.
 
 <!-- ![](./Images/system_diagram.jpg) -->
 <p align="center"><img width="640" height="320" src="./Images/system_diagram.jpg"></p>
 
 The water level in the tank is measured by a pressure sensor connected to an ESP32C3 interface board that is on the same wifi network as the Shelly device. The Shelly device polls the interface board for the water level as a % of the tank volume.
+
+<p align="center"><img width="640" height="320" src="./Images/sensor_interface.jpg"></p>
 
 ---
 
