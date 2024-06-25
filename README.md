@@ -60,7 +60,7 @@ The submersible pressure sensor connects to an ESP32C3 interface board that runs
 
 The interface board reads the pressure and then calculates the volume of water in the tank. This volume is expressed as a percentage of the full tank capacity.
 
-```
+```yaml
 - platform: template
   name: Tank Level
   update_interval: 5s
@@ -72,6 +72,24 @@ The interface board reads the pressure and then calculates the volume of water i
 ```
 
 The Shelly device polls the interface board on a regular cadence to read the water level percentage.
+
+```javascript
+// --- Run main loop on timer schedule ---
+function tMain() {
+  // get sensor value
+  Shelly.call("HTTP.Request", sUrlParam, httpGetSensorValue);
+  if (DEBUG) console.log("Sensor value: ", sensorVal);
+  // update home screen
+  updateHomeScreen();
+  // control the inlet valve
+  controlValve();
+  // handle alerts
+  if (sensorVal > 0) handleAlert();
+  // handle notifications
+  if (DEBUG) console.log("Message Q:", messageQ);
+  processNotifications({ timer_flag: false });
+}
+```
 
 ## Shelly device
 
