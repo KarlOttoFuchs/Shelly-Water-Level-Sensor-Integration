@@ -17,13 +17,13 @@ let runningCalls = 0;
 let messageQ = [];
 let notifyTitle = "Water Tank";
 let notifyMessage = "";
-let notifyAccountKey = "1qllh98sf092kxe";
+let notifyAccountKey = "xxxxxxxxxxxxxx";
 let notifyUrl = "https://alertzy.app/send";
 let sUrlParam = {
   method: "GET",
   url: "http://192.168.0.190/sensor/tank_level",
   headers: {
-    "Authorization": "Basic YWRtaW46d3NfcGFzc3dvcmQ="
+    "Authorization": "xxxxxxxxxxxxxx"
   }
 }; // ESPHome device API call paramaters
 
