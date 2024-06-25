@@ -40,7 +40,7 @@ Water from the municipal connection fills the tank via a 24V DC electric normall
 <!-- ![](./Images/system_diagram.jpg) -->
 <p align="center"><img width="640" height="320" src="./Images/system_diagram.jpg"></p>
 
-The water level in the tank is measured by a pressure sensor connected to an ESP32C3 interface board that is on the same wifi network as the Shelly device. The Shelly device polls the interface board for the water level as a % of the tank volume.
+The water level in the tank is measured by a pressure sensor connected to an ESP32C3 interface board that is on the same wifi network as the Shelly device. The Shelly device polls the interface board for the water level as a percentage of the tank volume.
 
 ---
 
@@ -54,8 +54,25 @@ The industrial stainless steel submersible pressure level sensor adopts a high-p
 
 ### Interface board
 
+The submersible pressure sensor connects to an ESP32C3 interface board that runs on ESPHome. The software on the interface board exposes a web server where information on the tank height and diameter is entered to calculate the volume of water that the tank can hold.
+
 <p align="center"><img width="640" height="400" src="./Images/sensor_interface.jpg"></p>
 
----
+The interface board reads the pressure and then calculates the volume of water in the tank. This volume is expressed as a percentage of the full tank capacity.
+
+```
+- platform: template
+  name: Tank Level
+  update_interval: 5s
+  unit_of_measurement: "%"
+  icon: "mdi:water-percent"
+  accuracy_decimals: 0
+  lambda: |-
+    return ((id(filled_volume).state)/(id(tank_volume).state))*100;
+```
+
+The Shelly device polls the interface board on a regular cadence to read the water level percentage.
 
 ## Shelly device
+
+---
