@@ -95,6 +95,25 @@ function tMain() {
 
 Custom components are used on the Shelly device to enter or change setup parameters, to control if notifications are enabled, to display the connection status and display the tank volume percentage.
 
-<p align="center"><img width="640" height="400" src="./Images/shelly_screen.png"></p>
+<p align="center"><img src="./Images/shelly_screen.png"></p>
 
----
+| Component Title       | Description                                             |
+| --------------------- | ------------------------------------------------------- |
+| Tank Level            | Tank % full                                             |
+| --------------------- | ------------------------------------------------------- |
+|                       | Starting                                                |
+| Communication         | Diconnected                                             |
+|                       | Connected                                               |
+| --------------------- | ------------------------------------------------------- |
+| Alert above           | Notify when tank level goes above this value            |
+| --------------------- | ------------------------------------------------------- |
+| Alert below           | Notify when tank level goes below this value            |
+| --------------------- | ------------------------------------------------------- |
+| Send Notifications    | Enable / disable push notifications                     |
+| --------------------- | ------------------------------------------------------- |
+| Open valve setting    | Switch on relay when tank level drops below this value  |
+| --------------------- | ------------------------------------------------------- |
+| Close valve setting   | Switch off relay when tanl level goes above this value  |
+| --------------------- | ------------------------------------------------------- |
+
+## |
