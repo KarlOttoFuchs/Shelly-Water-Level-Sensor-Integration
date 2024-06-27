@@ -97,23 +97,16 @@ Custom components are used on the Shelly device to enter or change setup paramet
 
 <p align="center"><img src="./Images/shelly_screen.png"></p>
 
-| Component Title       | Description                                             |
-| --------------------- | ------------------------------------------------------- |
-| Tank Level            | Tank % full                                             |
-| --------------------- | ------------------------------------------------------- |
-|                       | Starting                                                |
-| Communication         | Diconnected                                             |
-|                       | Connected                                               |
-| --------------------- | ------------------------------------------------------- |
-| Alert above           | Notify when tank level goes above this value            |
-| --------------------- | ------------------------------------------------------- |
-| Alert below           | Notify when tank level goes below this value            |
-| --------------------- | ------------------------------------------------------- |
-| Send Notifications    | Enable / disable push notifications                     |
-| --------------------- | ------------------------------------------------------- |
-| Open valve setting    | Switch on relay when tank level drops below this value  |
-| --------------------- | ------------------------------------------------------- |
-| Close valve setting   | Switch off relay when tanl level goes above this value  |
-| --------------------- | ------------------------------------------------------- |
+| Component Title     | Description                                            |
+| ------------------- | ------------------------------------------------------ |
+| Tank Level          | Tank % full                                            |
+|                     | Starting                                               |
+| Communication       | Diconnected                                            |
+|                     | Connected                                              |
+| Alert above         | Notify when tank level goes above this value           |
+| Alert below         | Notify when tank level goes below this value           |
+| Send Notifications  | Enable / disable push notifications                    |
+| Open valve setting  | Switch on relay when tank level drops below this value |
+| Close valve setting | Switch off relay when tanl level goes above this value |
 
 ## |
