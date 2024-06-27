@@ -93,7 +93,13 @@ function tMain() {
 
 ## Shelly device
 
-Custom components are used on the Shelly device to enter or change setup parameters, to control if notifications are enabled, to display the connection status and display the tank volume percentage.
+The code shared under the code directory is added to a Shelly 1 Mini Gen 3 device as a script and the script is set to automatically start when the device is switched on.
+
+The Shelly's relay controls a 24V solenoid ball valve or motorised ball valve.
+
+-- Add picture here ---
+
+Custom components are set up on the Shelly device to allow the user to enter or change setup parameters, to control if notifications are enabled, display the connection status and display the tank volume percentage.
 
 <p align="center"><img width="640" height="auto" src="./Images/shelly_screen.png"></p>
 
@@ -105,6 +111,10 @@ Custom components are used on the Shelly device to enter or change setup paramet
 | Alert below         | Notify when tank level goes below this value           |
 | Send Notifications  | Enable / disable push notifications                    |
 | Open valve setting  | Switch on relay when tank level drops below this value |
-| Close valve setting | Switch off relay when tanl level goes above this value |
+| Close valve setting | Switch off relay when tank level goes above this value |
 
-## |
+The tank level and communication fields can not be changed by the user. These are updated by the script. All the other parameters can be modified during run time. The user changeable values are stored in the Shelly's non volatile memory.
+
+## Use case demonstration
+
+--- Add video here ---
