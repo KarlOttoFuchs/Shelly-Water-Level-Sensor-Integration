@@ -71,7 +71,7 @@ The interface board reads the pressure and then calculates the volume of water i
     return ((id(filled_volume).state)/(id(tank_volume).state))*100;
 ```
 
-The Shelly device polls the interface board on a regular cadence to read the water level percentage.
+The Shelly device polls the interface board via a HTTP.Request call on a regular cadence to read the water level percentage.
 
 ```javascript
 // --- Run main loop on timer schedule ---
@@ -92,5 +92,9 @@ function tMain() {
 ```
 
 ## Shelly device
+
+Custom components are used on the Shelly device to enter or change setup parameters, to control if notifications are enabled, to display the connection status and display the tank volume percentage.
+
+<p align="center"><img width="640" height="400" src="./Images/shelly_screen.png"></p>
 
 ---

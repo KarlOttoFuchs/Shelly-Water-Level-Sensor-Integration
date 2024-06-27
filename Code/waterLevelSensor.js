@@ -1,14 +1,14 @@
 let DEBUG = true;
 let tInterval = 20 * 1000; // timer interval in ms
 let sensorVal = 0;
-let alertTrigger1 = 0;
-let alertTrigger2 = 0;
+let alertAbove = 0;
+let alertBelow = 0;
 let openValveSetting = 0;
 let closeValveSetting = 0;
 let notifyEnabled = false;
 let connectionError = true;
-let alert1Shown = false;
-let alert2Shown = false;
+let alertAboveShown = false;
+let alertBelowShown = false;
 let valveOpen = false;
 let communicationText = "";
 let nTimerPeriod = 1000;
@@ -17,13 +17,13 @@ let runningCalls = 0;
 let messageQ = [];
 let notifyTitle = "Water Tank";
 let notifyMessage = "";
-let notifyAccountKey = "xxxxxxxxxxxxxx";
+let notifyAccountKey = "xxxxxxxxxx";
 let notifyUrl = "https://alertzy.app/send";
 let sUrlParam = {
   method: "GET",
   url: "http://192.168.0.190/sensor/tank_level",
   headers: {
-    "Authorization": "xxxxxxxxxxxxxx"
+    "Authorization": "xxxxxxxxxx"
   }
 }; // ESPHome device API call paramaters
 
@@ -37,10 +37,10 @@ function setup() {
     closeValveSetting = result.value;
   })
   Shelly.call("Number.GetStatus", { id: 202 }, function (result) {
-    alertTrigger1 = result.value;
+    alertAbove = result.value;
   })
   Shelly.call("Number.GetStatus", { id: 203 }, function (result) {
-    alertTrigger2 = result.value;
+    alertBelow = result.value;
   })
   Shelly.call("Boolean.GetStatus", { id: 200 }, function (result) {
     notifyEnabled = result.value;
@@ -56,10 +56,10 @@ Shelly.addStatusHandler(function (status) {
     closeValveSetting = status.delta.value;
   }
   if (status.component === "number:202" && typeof (status.delta.value) !== undefined) {
-    alertTrigger1 = status.delta.value;
+    alertAbove = status.delta.value;
   }
   if (status.component === "number:203" && typeof (status.delta.value) !== undefined) {
-    alertTrigger2 = status.delta.value;
+    alertBelow = status.delta.value;
   }
   if (status.component === "boolean:200" && typeof (status.delta.value) !== undefined) {
     notifyEnabled = status.delta.value;
@@ -125,29 +125,29 @@ function controlValve() {
 
 // Function to check if alerts are triggered and setting up appropriate alert message ---
 function handleAlert() {
-  if ((parseFloat(sensorVal) <= parseFloat(alertTrigger1)) && !alert1Shown) {
-    notifyMessage = "Alert! Water level below " + Math.round(alertTrigger1) + "%";
+  if ((parseFloat(sensorVal) >= parseFloat(alertAbove)) && !alertAboveShown) {
+    notifyMessage = "Alert! Water level above " + Math.round(alertAbove) + "%";
     if (DEBUG) console.log(notifyMessage);
     if (notifyEnabled) messageQ.push(notifyMessage);
-    alert1Shown = true;
+    alertAboveShown = true;
   }
-  if ((parseFloat(sensorVal) >= parseFloat(alertTrigger1)) && alert1Shown) {
-    notifyMessage = "Alert cleared. Water level above " + Math.round(alertTrigger1) + "%";
+  if ((parseFloat(sensorVal) <= parseFloat(alertAbove)) && alertAboveShown) {
+    notifyMessage = "Alert cleared. Water level below " + Math.round(alertAbove) + "%";
     if (DEBUG) console.log(notifyMessage);
     if (notifyEnabled) messageQ.push(notifyMessage);
-    alert1Shown = false;
+    alertAboveShown = false;
   }
-  if ((parseFloat(sensorVal) <= parseFloat(alertTrigger2)) && !alert2Shown) {
-    notifyMessage = "Alert! Water level below " + Math.round(alertTrigger2) + "%";
+  if ((parseFloat(sensorVal) <= parseFloat(alertBelow)) && !alertBelowShown) {
+    notifyMessage = "Alert! Water level below " + Math.round(alertBelow) + "%";
     if (DEBUG) console.log(notifyMessage);
     if (notifyEnabled) messageQ.push(notifyMessage);
-    alert2Shown = true;
+    alertBelowShown = true;
   }
-  if ((parseFloat(sensorVal) >= parseFloat(alertTrigger2)) && alert2Shown) {
-    notifyMessage = "Alert cleared. Water level above " + Math.round(alertTrigger2) + "%";
+  if ((parseFloat(sensorVal) >= parseFloat(alertBelow)) && alertBelowShown) {
+    notifyMessage = "Alert cleared. Water level above " + Math.round(alertBelow) + "%";
     if (DEBUG) console.log(notifyMessage);
     if (notifyEnabled) messageQ.push(notifyMessage);
-    alert2Shown = false;
+    alertBelowShown = false;
   }
 }
 
