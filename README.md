@@ -119,4 +119,6 @@ The tank level and communication fields can not be changed by the user. These ar
 
 The following video demonstrates functionality in the case where there is no communication with the sensor board.
 
-<div align="center"> https://github.com/KarlOttoFuchs/Shelly-Water-Level-Sensor-Integration/assets/86884634/cb31e652-4fc3-478c-b7b8-938bf5fd3511</div>
+https://github.com/KarlOttoFuchs/Shelly-Water-Level-Sensor-Integration/assets/86884634/238ba819-8e5a-42be-8ae5-9584199f8bda
+
+
