@@ -97,7 +97,7 @@ The code shared under the code directory is added to a Shelly 1 Mini Gen 3 devic
 
 The Shelly's relay controls a 24V solenoid ball valve or motorised ball valve.
 
--- Add picture here ---
+<p align="center"><img width="640" height="auto" src="./Images/test_setup.jpg"></p>
 
 Custom components are set up on the Shelly device to allow the user to enter or change setup parameters, to control if notifications are enabled, display the connection status and display the tank volume percentage.
 
