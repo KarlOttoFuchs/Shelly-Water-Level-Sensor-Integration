@@ -56,7 +56,7 @@ The industrial stainless steel submersible pressure level sensor adopts a high-p
 
 The submersible pressure sensor connects to an ESP32C3 interface board that runs on ESPHome. The software on the interface board exposes a web server where information on the tank height and diameter is entered to calculate the volume of water that the tank can hold.
 
-<p align="center"><img width="640" height="400" src="./Images/sensor_interface.jpg"></p>
+<p align="center"><img width="640" height="auto" src="./Images/sensor_interface.jpg"></p>
 
 The interface board reads the pressure and then calculates the volume of water in the tank. This volume is expressed as a percentage of the full tank capacity.
 
@@ -101,7 +101,7 @@ The Shelly's relay controls a 24V solenoid ball valve or motorised ball valve.
 
 Custom components are set up on the Shelly device to allow the user to enter or change setup parameters, to control if notifications are enabled, display the connection status and display the tank volume percentage.
 
-<p align="center"><img width="640" height="auto" src="./Images/shelly_screen.png"></p>
+<p align="center"><img width="400" height="auto" src="./Images/shelly_screen.png"></p>
 
 | Component Title     | Description                                            |
 | ------------------- | ------------------------------------------------------ |
