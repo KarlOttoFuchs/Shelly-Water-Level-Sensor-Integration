@@ -119,6 +119,8 @@ The tank level and communication fields can not be changed by the user. These ar
 
 --- Add video here ---
 
-
 https://github.com/KarlOttoFuchs/Shelly-Water-Level-Sensor-Integration/assets/86884634/cb31e652-4fc3-478c-b7b8-938bf5fd3511
 
+<div align="center">
+  <video src="images/Shelly Disabled.mp4" width="400" />
+</div>
