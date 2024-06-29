@@ -1,6 +1,6 @@
 # Shelly-Water-Level-Sensor-Integration
 
-Shelly Gen3 device integration with custom water level sensor board running ESPHome
+Shelly Gen3 device integration with custom water level sensor board running ESPHome.
 
 ## Description
 
@@ -27,9 +27,7 @@ Deciding on a solution:
 - My friend loves what Home Assitant can do, but he does not want to invest in such an eco system, as it looks far too complicated to him.
 - Interfacing the 4-20mA sensor to the Shelly requires a current to voltage converter or sourcing a DC version of this sensor. The scripting also looked like it will be time consuming to write and debug. (something to be explored later)
 - I therefore proposed that I expose the web interface of the ESP32 water sensor and allow for the tank parameters to be added, and in so doing calculate the volume of water etc. This was a very easy change as the device runs on ESPHome.
-- A Shelly device is then used as a replacement for Home Assitant to read the ESPHome ESP32 sensor, control the inlet valve and send out notifications when the water level reaches some preset threshold.
-
-What follows is the Shelly 1 Mini Gen3 javascipt code that implement the water tank IoT controller.
+- A Shelly device is then used as a replacement for Home Assitant to read the tank water level percentage from the ESPHome ESP32 sensor board, control the inlet valve and send out notifications when the water level reaches some preset threshold.
 
 ---
 
@@ -117,8 +115,10 @@ The tank level and communication fields can not be changed by the user. These ar
 
 ## Use case demonstration
 
-The following video demonstrates functionality in the case where there is no communication with the sensor board.
+| Description                                                      | Video                                                                                                                       |
+| ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| No communication between the Shelly device and the sensor board. | https://github.com/KarlOttoFuchs/Shelly-Water-Level-Sensor-Integration/assets/86884634/238ba819-8e5a-42be-8ae5-9584199f8bda |
 
-https://github.com/KarlOttoFuchs/Shelly-Water-Level-Sensor-Integration/assets/86884634/238ba819-8e5a-42be-8ae5-9584199f8bda
+The first video demonstrates functionality in the case where there is no communication between the Shelly device and the sensor board.
 
-
+The second video demonstrates the functionality in the case where the Shelly device is able to communicate sucessfully with the sensor board.
