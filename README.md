@@ -118,5 +118,9 @@ The tank level and communication fields can not be changed by the user. These ar
 | Description                                       | Video                                                                                                                       |
 | ------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
 | No communication between Shelly and sensor board. | https://github.com/KarlOttoFuchs/Shelly-Water-Level-Sensor-Integration/assets/86884634/238ba819-8e5a-42be-8ae5-9584199f8bda |
-| Settings and alert above.                         |                                                                                                                             |
+| Settings and alert above.                         |    
+
+https://github.com/KarlOttoFuchs/Shelly-Water-Level-Sensor-Integration/assets/86884634/9acd2433-8b15-4aff-9d04-45d71a25a300
+
+                                                                                                                         |
 | Open and close valve.                             |                                                                                                                             |
