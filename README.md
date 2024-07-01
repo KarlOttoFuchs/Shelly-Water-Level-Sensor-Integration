@@ -25,7 +25,7 @@ Options explored:
 Deciding on a solution:
 
 - My friend loves what Home Assitant can do, but he does not want to invest in such an eco system, as it looks far too complicated to him.
-- Interfacing the 4-20mA sensor to the Shelly requires a current to voltage converter or sourcing a DC version of this sensor. The scripting also looked like it will be time consuming to write and debug. (something to be explored later)
+- Interfacing the 4-20mA sensor to the Shelly requires a current to voltage converter or sourcing a DC version of this sensor as well as investing in a Shelly Add-On.
 - I therefore proposed that I expose the web interface of the ESP32 water sensor and allow for the tank parameters to be added, and in so doing calculate the volume of water etc. This was a very easy change as the device runs on ESPHome.
 - A Shelly device is then used as a replacement for Home Assitant to read the tank water level percentage from the ESPHome ESP32 sensor board, control the inlet valve and send out notifications when the water level reaches some preset threshold.
 
@@ -46,7 +46,7 @@ The water level in the tank is measured by a pressure sensor connected to an ESP
 
 ### Pressure sensor
 
-The industrial stainless steel submersible pressure level sensor adopts a high-performance pressure sensing chip, with advanced circuit processing and temperature compensation technology. The submersible pressure level sensor receives different pressures at different depths of liquid, which can be converted into corresponding current signals and output through the sensor. In this way, the depth of liquid can be measured.
+The industrial stainless steel submersible pressure level sensor use a high-performance pressure sensing chip, with advanced circuit processing and temperature compensation technology. The submersible pressure level sensor receives different pressures at different depths of liquid, which can be converted into corresponding current signals and output through the sensor. In this way, the depth of liquid can be measured.
 
 <p align="center"><img width="640" height="320" src="./Images/pressure_sensor.jpg"></p>
 
@@ -69,7 +69,7 @@ The interface board reads the pressure and then calculates the volume of water i
     return ((id(filled_volume).state)/(id(tank_volume).state))*100;
 ```
 
-The Shelly device polls the interface board via a HTTP.Request call on a regular cadence to read the water level percentage.
+The Shelly device polls the interface board via a HTTP.Request call on a regular frequency to read the water level percentage.
 
 ```javascript
 // --- Run main loop on timer schedule ---
@@ -97,7 +97,7 @@ The Shelly's relay controls a 24V solenoid ball valve or motorised ball valve.
 
 <p align="center"><img width="640" height="auto" src="./Images/test_setup.jpg"></p>
 
-Custom components are set up on the Shelly device to allow the user to enter or change setup parameters, to control if notifications are enabled, display the connection status and display the tank volume percentage.
+Custom components are set up on the Shelly device to allow the user to enter or change setup parameters, enable notifications, display the connection status and display the tank volume percentage.
 
 <p align="center"><img width="400" height="auto" src="./Images/shelly_screen.png"></p>
 
